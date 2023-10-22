@@ -46,7 +46,7 @@ int main() {
             cout << "your code passes (65536 - 4096) Bytes\n";
             abort();
         } 
-        if(line == ".DATA") {text=0;i--;cout << "data block\n";continue;}
+        if(line == ".DATA") {text=0;i=65535-4096-2048;cout << "data block\n";continue;}
         if(!text) {
             if(line.size() < 2) {cout << "ERROR line " << j << ": wrong size\n"; abort();}
             ROM[i]=stoi(line.substr(0, 2), nullptr, 16);
